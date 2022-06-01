@@ -1,0 +1,31 @@
+* { margin: 0; padding: 0; text-align: center; } 
+body { background-color: #f8f8f8; font-family: 'yg-jalnan'; padding: 50px; } 
+@font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') } 
+
+#section1 h2{ margin: 15px; }
+#section1 #imgSet { position: relative; width: 810px; height: 543px; margin: 0 auto; } 
+#section1 #imgSet #picSet { margin: 0 auto; border: 5px solid #749520; border-radius: 10px; width: 800px; height: 533px; position: relative; overflow: hidden; } 
+#section1 #imgSet #picSet img { position: absolute; transition: left 0.5s; } 
+#section1 #imgSet #picSet dl { z-index: 1; position: absolute; bottom:-100px; left: 0; background-color: #ffffff55; width: 100%; padding: 20px 0; } 
+#section1 #imgSet #picSet dl.active { animation: textMotionIn forwards 1s; } 
+#section1 #imgSet #picSet dl.activeOut { animation: textMotionOut forwards 1s; }
+
+@keyframes textMotionIn { 
+    from { bottom: -100px; opacity: 0;} 
+    to { bottom: 0; opacity: 1;} 
+} 
+@keyframes textMotionOut { 
+    from { bottom: 0; opacity: 1; } 
+    to { bottom: 50; opacity: 0;} 
+} 
+
+
+#section1 #imgSet button { position: absolute; top: 50%; margin-top: -25px; width: 50px; height: 50px; color: #fff; background-color: #749520; border: 0; border-radius: 50%; font-size: 30px; font-family: 'yg-jalnan'; } 
+#section1 #imgSet button:hover { background-color: #ff8c34; } 
+#section1 #imgSet #prev_btn { left: -100px; } 
+#section1 #imgSet #next_btn { right: -100px; } 
+
+#section1 #imgSet #dotList { margin-top: 20px; } 
+#section1 #imgSet #dotList li { display: inline-block; width: 15px; height: 15px; background-color: #749520; color: #fff; border-radius: 50%; margin: 0 5px; cursor: pointer; } 
+#section1 #imgSet #dotList li:hover { background-color: #ff8c34; } 
+#section1 #imgSet #dotList li.active { background-color: #fb451c; } 
